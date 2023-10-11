@@ -2,7 +2,9 @@ import { FormProvider, useForm } from "react-hook-form";
 import FormInput from "./components/FormInput/FormInput";
 
 function App() {
-	const methods = useForm();
+	const methods = useForm({
+		defaultValues: { customInput: "" },
+	});
 
 	return (
 		<FormProvider {...methods}>
